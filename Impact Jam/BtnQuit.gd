@@ -1,4 +1,4 @@
 extends Button
 
 func _pressed():
-	get_tree().quit() # Close application
+	get_tree().quit()
