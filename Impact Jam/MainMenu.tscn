@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://btnQuit.gd" type="Script" id=1]
-[ext_resource path="res://btnPlay.gd" type="Script" id=2]
+[ext_resource path="res://BtnQuit.gd" type="Script" id=1]
+[ext_resource path="res://BtnPlay.gd" type="Script" id=2]
 
 [node name="MainMenu" type="Control"]
 
-[node name="btnQuit" type="Button" parent="."]
+[node name="BtnQuit" type="Button" parent="."]
 margin_left = 630.0
 margin_top = 530.0
 margin_right = 1019.0
@@ -13,7 +13,7 @@ margin_bottom = 669.0
 text = "Quit"
 script = ExtResource( 1 )
 
-[node name="btnPlay" type="Button" parent="."]
+[node name="BtnPlay" type="Button" parent="."]
 margin_left = 630.0
 margin_top = 200.0
 margin_right = 1019.0
