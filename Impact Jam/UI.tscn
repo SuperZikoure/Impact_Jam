@@ -42,21 +42,4 @@ script = ExtResource( 2 )
 [node name="Timer" type="Timer" parent="Up/Center/TimerLabel"]
 autostart = true
 
-[node name="Down" type="VBoxContainer" parent="."]
-margin_left = 1504.0
-margin_top = 800.0
-margin_right = 1568.0
-margin_bottom = 864.0
-alignment = 2
-
-[node name="Right" type="HBoxContainer" parent="Down"]
-margin_right = 64.0
-margin_bottom = 64.0
-alignment = 2
-
-[node name="Item" type="TextureRect" parent="Down/Right"]
-margin_right = 64.0
-margin_bottom = 64.0
-texture = ExtResource( 1 )
-
 [connection signal="timeout" from="Up/Center/TimerLabel/Timer" to="Up/Center/TimerLabel" method="_on_Timer_timeout"]
