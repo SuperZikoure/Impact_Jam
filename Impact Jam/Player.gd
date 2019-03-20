@@ -14,6 +14,5 @@ func set_inactive():
 
 func _process(delta):
 	if character.is_active:
-		print("cam position : ", camera.position, ", player pos : " , position + character.position)
 		camera.position = position + character.position
 		pass
