@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/maps/floor3.png" type="Texture" id=1]
 [ext_resource path="res://assets/maps/floor2.png" type="Texture" id=2]
@@ -9,17 +9,19 @@
 [ext_resource path="res://LockedDoorDestroy.gd" type="Script" id=7]
 [ext_resource path="res://LockedDoorDestroyCode.gd" type="Script" id=8]
 [ext_resource path="res://StaircaseDoor.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Key.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Code.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Book.tscn" type="PackedScene" id=12]
-[ext_resource path="res://GlassBreaker.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Generator.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Exit.gd" type="Script" id=15]
-[ext_resource path="res://PlayersManager.gd" type="Script" id=16]
-[ext_resource path="res://WheelchairDudeScene.tscn" type="PackedScene" id=17]
-[ext_resource path="res://BlindDudeScene.tscn" type="PackedScene" id=18]
-[ext_resource path="res://UI.tscn" type="PackedScene" id=19]
-[ext_resource path="res://PauseInterface.tscn" type="PackedScene" id=20]
+[ext_resource path="res://EscalatorDownScene.tscn" type="PackedScene" id=10]
+[ext_resource path="res://EscalatorUpScene.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Key.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Code.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Book.tscn" type="PackedScene" id=14]
+[ext_resource path="res://GlassBreaker.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Generator.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Exit.gd" type="Script" id=17]
+[ext_resource path="res://PlayersManager.gd" type="Script" id=18]
+[ext_resource path="res://WheelchairDudeScene.tscn" type="PackedScene" id=19]
+[ext_resource path="res://BlindDudeScene.tscn" type="PackedScene" id=20]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=21]
+[ext_resource path="res://PauseInterface.tscn" type="PackedScene" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 944 )
@@ -107,6 +109,10 @@ script = ExtResource( 8 )
 position = Vector2( -496.539, 46.9472 )
 scale = Vector2( 0.5, 0.5 )
 
+[node name="EscalatorDownScene" parent="Level/Doors/Floor3" instance=ExtResource( 10 )]
+position = Vector2( 1766.52, 15.334 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="Floor2" type="Node2D" parent="Level/Doors"]
 
 [node name="SimpleDoor" parent="Level/Doors/Floor2" instance=ExtResource( 5 )]
@@ -130,6 +136,14 @@ script = ExtResource( 7 )
 position = Vector2( -496.539, 846.947 )
 scale = Vector2( 0.5, 0.5 )
 
+[node name="EscalatorDownScene" parent="Level/Doors/Floor2" instance=ExtResource( 10 )]
+position = Vector2( -1759.52, 815.082 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="EscalatorUpScene" parent="Level/Doors/Floor2" instance=ExtResource( 11 )]
+position = Vector2( 1766.52, 815.059 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="Floor1" type="Node2D" parent="Level/Doors"]
 
 [node name="SimpleDoor" parent="Level/Doors/Floor1" instance=ExtResource( 5 )]
@@ -147,6 +161,14 @@ script = ExtResource( 8 )
 
 [node name="StaircaseDoor" parent="Level/Doors/Floor1" instance=ExtResource( 9 )]
 position = Vector2( -496.539, 1647 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="EscalatorDownScene" parent="Level/Doors/Floor1" instance=ExtResource( 10 )]
+position = Vector2( 1766.52, 1614.33 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="EscalatorUpScene" parent="Level/Doors/Floor1" instance=ExtResource( 11 )]
+position = Vector2( -1759.52, 1615 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Floor0" type="Node2D" parent="Level/Doors"]
@@ -167,40 +189,44 @@ position = Vector2( 1520, 2416 )
 position = Vector2( -496.539, 2415 )
 scale = Vector2( 0.5, 0.5 )
 
+[node name="EscalatorDownScene" parent="Level/Doors/Floor0" instance=ExtResource( 11 )]
+position = Vector2( 1766.52, 2382.96 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="Keys" type="Node2D" parent="Level"]
 
-[node name="KeyFloor3" parent="Level/Keys" instance=ExtResource( 10 )]
+[node name="KeyFloor3" parent="Level/Keys" instance=ExtResource( 12 )]
 position = Vector2( -1040, 48 )
 
-[node name="Code" parent="Level/Keys" instance=ExtResource( 11 )]
+[node name="Code" parent="Level/Keys" instance=ExtResource( 13 )]
 position = Vector2( -224, 0 )
 
-[node name="KeyFloor2" parent="Level/Keys" instance=ExtResource( 10 )]
+[node name="KeyFloor2" parent="Level/Keys" instance=ExtResource( 12 )]
 position = Vector2( 384, 1648 )
 
-[node name="Book" parent="Level/Keys" instance=ExtResource( 12 )]
+[node name="Book" parent="Level/Keys" instance=ExtResource( 14 )]
 position = Vector2( 96, 864 )
 
-[node name="GlassBreaker" parent="Level/Keys" instance=ExtResource( 13 )]
+[node name="GlassBreaker" parent="Level/Keys" instance=ExtResource( 15 )]
 position = Vector2( -960, 800 )
 
-[node name="Generator" parent="Level/Keys" instance=ExtResource( 14 )]
+[node name="Generator" parent="Level/Keys" instance=ExtResource( 16 )]
 position = Vector2( -160, 2368 )
 
 [node name="Exit" type="Area2D" parent="Level"]
-script = ExtResource( 15 )
+script = ExtResource( 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Exit"]
 position = Vector2( -576, 2368 )
 shape = SubResource( 4 )
 
 [node name="PlayersManager" type="Node2D" parent="."]
-script = ExtResource( 16 )
+script = ExtResource( 18 )
 
-[node name="WheelchairDudeScene" parent="PlayersManager" instance=ExtResource( 17 )]
+[node name="WheelchairDudeScene" parent="PlayersManager" instance=ExtResource( 19 )]
 position = Vector2( -1599.73, 87.9288 )
 
-[node name="BlindDudeScene" parent="PlayersManager" instance=ExtResource( 18 )]
+[node name="BlindDudeScene" parent="PlayersManager" instance=ExtResource( 20 )]
 position = Vector2( -1728, 64 )
 scale = Vector2( 1, 1 )
 
@@ -211,9 +237,9 @@ drag_margin_v_enabled = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="UI" parent="CanvasLayer" instance=ExtResource( 19 )]
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 21 )]
 
-[node name="PauseInterface" parent="CanvasLayer" instance=ExtResource( 20 )]
+[node name="PauseInterface" parent="CanvasLayer" instance=ExtResource( 22 )]
 
 [connection signal="key" from="Level/Keys/KeyFloor3" to="Level/Doors/Floor3/LockedDoor" method="_on_Key_key"]
 [connection signal="code" from="Level/Keys/Code" to="Level/Doors/Floor3/LockedDoor2" method="_on_Code_code"]

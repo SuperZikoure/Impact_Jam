@@ -12,11 +12,11 @@ func _process(delta):
 	pass
 
 func _on_GlassBreaker_body_entered(body):
-	if body.get_name() == "Character" && broken == 0:
+	if body.get_name() == "WheelchairDude" && broken == 0:
 		$GlassBreaker/AnimatedSprite.play("activated")
 	pass
 
 func _on_GlassBreaker_body_exited(body):
-	if body.get_name() == "Character" && broken == 0:
+	if body.get_name() == "WheelchairDude" && broken == 0:
 		$Key/AnimatedSprite.play("default")
 	pass
