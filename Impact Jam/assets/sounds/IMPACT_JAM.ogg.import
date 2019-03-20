@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/IMPACT_JAM.ogg-a717bf8fc63d6b407b62e531606008bd.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/IMPACT_JAM.ogg"
+dest_files=[ "res://.import/IMPACT_JAM.ogg-a717bf8fc63d6b407b62e531606008bd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

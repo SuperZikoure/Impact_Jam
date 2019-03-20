@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://BtnBackToMenu.gd" type="Script" id=1]
 [ext_resource path="res://BtnPlay.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/menu/base_click.png" type="Texture" id=9]
 [ext_resource path="res://assets/menu/back_hover.png" type="Texture" id=10]
 [ext_resource path="res://Back2.gd" type="Script" id=11]
+[ext_resource path="res://assets/sounds/game_over.ogg" type="AudioStream" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 47
@@ -66,4 +67,7 @@ texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
 script = ExtResource( 11 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
 
