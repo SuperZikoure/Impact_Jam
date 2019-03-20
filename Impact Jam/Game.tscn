@@ -27,7 +27,7 @@
 extents = Vector2( 10, 944 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 1328 )
+extents = Vector2( 10, 1344 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 144 )
@@ -55,7 +55,7 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 
 [node name="Floor0" type="Sprite" parent="Level"]
-position = Vector2( 633.238, 2368 )
+position = Vector2( 633.238, 2384 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 
@@ -68,7 +68,6 @@ position = Vector2( -1936, 800 )
 shape = SubResource( 1 )
 
 [node name="Right" type="StaticBody2D" parent="Level/Walls"]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Walls/Right"]
 position = Vector2( 1936, 1184 )
@@ -78,7 +77,7 @@ shape = SubResource( 2 )
 editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Walls/LeftFloor0"]
-position = Vector2( -608, 2368 )
+position = Vector2( -608, 2384 )
 shape = SubResource( 3 )
 
 [node name="Doors" type="Node2D" parent="Level"]
@@ -174,23 +173,23 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Floor0" type="Node2D" parent="Level/Doors"]
 
 [node name="SimpleDoor" parent="Level/Doors/Floor0" instance=ExtResource( 5 )]
-position = Vector2( -368, 2416 )
+position = Vector2( -368, 2432 )
 
 [node name="SimpleDoor2" parent="Level/Doors/Floor0" instance=ExtResource( 5 )]
-position = Vector2( 48, 2416 )
+position = Vector2( 48, 2432 )
 
 [node name="SimpleDoor3" parent="Level/Doors/Floor0" instance=ExtResource( 5 )]
-position = Vector2( 880, 2416 )
+position = Vector2( 880, 2432 )
 
 [node name="SimpleDoor4" parent="Level/Doors/Floor0" instance=ExtResource( 5 )]
-position = Vector2( 1520, 2416 )
+position = Vector2( 1520, 2432 )
 
 [node name="StaircaseDoor" parent="Level/Doors/Floor0" instance=ExtResource( 9 )]
-position = Vector2( -496.539, 2415 )
+position = Vector2( -496.539, 2431 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="EscalatorDownScene" parent="Level/Doors/Floor0" instance=ExtResource( 11 )]
-position = Vector2( 1766.52, 2382.96 )
+position = Vector2( 1766.52, 2398.96 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Keys" type="Node2D" parent="Level"]
@@ -211,13 +210,13 @@ position = Vector2( 96, 864 )
 position = Vector2( -960, 800 )
 
 [node name="Generator" parent="Level/Keys" instance=ExtResource( 16 )]
-position = Vector2( -160, 2368 )
+position = Vector2( -160, 2384 )
 
 [node name="Exit" type="Area2D" parent="Level"]
 script = ExtResource( 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Exit"]
-position = Vector2( -576, 2368 )
+position = Vector2( -576, 2384 )
 shape = SubResource( 4 )
 
 [node name="PlayersManager" type="Node2D" parent="."]

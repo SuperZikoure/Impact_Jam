@@ -1,6 +1,6 @@
 extends Label
 
-var sec = 250
+var sec = 200
 
 func _process(delta):
 	if sec > 99:

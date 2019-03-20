@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://PauseScript.gd" type="Script" id=1]
 [ext_resource path="res://PausePanel.gd" type="Script" id=2]
+[ext_resource path="res://assets/menu/resume_base.png" type="Texture" id=3]
+[ext_resource path="res://assets/menu/resume_click.png" type="Texture" id=4]
+[ext_resource path="res://assets/menu/resume_hover.png" type="Texture" id=5]
+[ext_resource path="res://Resume.gd" type="Script" id=6]
+[ext_resource path="res://assets/menu/back_base.png" type="Texture" id=7]
+[ext_resource path="res://assets/menu/base_click.png" type="Texture" id=8]
+[ext_resource path="res://assets/menu/back_hover.png" type="Texture" id=9]
+[ext_resource path="res://Back.gd" type="Script" id=10]
 
 [node name="PauseInterface" type="Control"]
 anchor_right = 1.0
@@ -10,23 +18,48 @@ script = ExtResource( 1 )
 
 [node name="PausePanel" type="Panel" parent="."]
 pause_mode = 2
-visible = false
-margin_right = 1600.0
-margin_bottom = 900.0
+margin_left = -2340.0
+margin_top = -1780.0
+margin_right = -740.0
+margin_bottom = -880.0
 script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="PausePanel"]
+visible = false
 margin_left = 754.0
 margin_top = 170.0
 margin_right = 847.0
 margin_bottom = 184.0
 text = "GAME PAUSED"
 
+[node name="Resume" type="TextureButton" parent="PausePanel"]
+margin_left = 2440.0
+margin_top = 1950.0
+margin_right = 3840.0
+margin_bottom = 2178.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+script = ExtResource( 6 )
+
+[node name="Back" type="TextureButton" parent="PausePanel"]
+margin_left = 2490.0
+margin_top = 2250.0
+margin_right = 3890.0
+margin_bottom = 2478.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+script = ExtResource( 10 )
+
 [node name="Button" type="Button" parent="PausePanel"]
+visible = false
 margin_left = 550.0
 margin_top = 300.0
 margin_right = 1050.0
 margin_bottom = 370.0
 text = "Resume"
 
+[connection signal="pressed" from="PausePanel/Resume" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="PausePanel/Back" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="PausePanel/Button" to="PausePanel" method="_on_Button_pressed"]
