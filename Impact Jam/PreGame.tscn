@@ -13,7 +13,7 @@ margin_right = 1130.0
 margin_bottom = 440.0
 text = "                                                         THE BUILDING IS ON FIRE !!!!
 
-Johny and John are currently on the top floor of the building and they have to escape. They need  to help eachother to make it to the bottom.
+Johny and John are currently on the top floor of the building and they have to escape. They need to help eachother in order to make it to the bottom.
 Hurry ! The flames are burning down the building !"
 
 [node name="Button" type="Button" parent="."]
