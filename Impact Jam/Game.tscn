@@ -29,15 +29,9 @@ current = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 
-[node name="UI" parent="PlayersManager/Camera2D" instance=ExtResource( 5 )]
-margin_left = -800.0
-margin_top = -450.0
-margin_right = -800.0
-margin_bottom = -450.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseInterface" parent="PlayersManager/Camera2D" instance=ExtResource( 6 )]
-margin_left = -800.0
-margin_top = -450.0
-margin_right = -800.0
-margin_bottom = -450.0
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 5 )]
+
+[node name="PauseInterface" parent="CanvasLayer" instance=ExtResource( 6 )]
 
