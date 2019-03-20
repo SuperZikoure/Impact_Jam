@@ -34,4 +34,14 @@ func _on_AnimatedSprite_animation_finished():
 				$AnimatedSprite.play("idle_right")
 			elif look == -1:
 				$AnimatedSprite.play("idle_left")
+		if randi() % 4 + 1 == 1:
+			if look == 1:
+				$AnimatedSprite.play("anim_right")
+			elif look == -1:
+				$AnimatedSprite.play("anim_left")
+		else:
+			if look == 1:
+				$AnimatedSprite.play("idle_right")
+			elif look == -1:
+				$AnimatedSprite.play("idle_left")
 	pass
