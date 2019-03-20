@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/maps/floor3.png" type="Texture" id=1]
 [ext_resource path="res://assets/maps/floor2.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://BlindDudeScene.tscn" type="PackedScene" id=20]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=21]
 [ext_resource path="res://PauseInterface.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/sounds/IMPACT_JAM.ogg" type="AudioStream" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 944 )
@@ -243,6 +244,10 @@ drag_margin_v_enabled = false
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 21 )]
 
 [node name="PauseInterface" parent="CanvasLayer" instance=ExtResource( 22 )]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+autoplay = true
 
 [connection signal="key" from="Level/Keys/KeyFloor3" to="Level/Doors/Floor3/LockedDoor" method="_on_Key_key"]
 [connection signal="code" from="Level/Keys/Code" to="Level/Doors/Floor3/LockedDoor2" method="_on_Code_code"]
