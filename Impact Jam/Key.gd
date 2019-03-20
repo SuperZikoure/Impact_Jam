@@ -9,11 +9,11 @@ func _process(delta):
 	pass
 
 func _on_Key_body_entered(body):
-	if body.get_name() == "Character":
+	if body.get_name() == "BlindDude":
 		$Key/AnimatedSprite.play("activated")
 	pass
 
 func _on_Key_body_exited(body):
-	if body.get_name() == "Character":
+	if body.get_name() == "BlindDude":
 		$Key/AnimatedSprite.play("default")
 	pass

@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var character = get_node("Character")
+onready var character = get_node("WheelchairDude")
 var camera
 
 func init(cam):

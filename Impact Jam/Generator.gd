@@ -11,11 +11,11 @@ func _process(delta):
 	pass
 
 func _on_Generator_body_entered(body):
-	if body.get_name() == "Character" && activated == 0:
+	if body.get_name() == "BlindDude" && activated == 0:
 		$Generator/AnimatedSprite.play("activated")
 	pass
 
 func _on_Generator_body_exited(body):
-	if body.get_name() == "Character":
+	if body.get_name() == "BlindDude":
 		$Generator/AnimatedSprite.play("default")
 	pass

@@ -2,8 +2,8 @@ extends Node
 
 onready var CAMERA = get_node("Camera2D")
 onready var PLAYERS = [
-		get_node("Tetraplegic"),
-		get_node("BlindDude")
+		get_node("WheelchairDudeScene"),
+		get_node("BlindDudeScene")
 	]
 	
 var idx = 0

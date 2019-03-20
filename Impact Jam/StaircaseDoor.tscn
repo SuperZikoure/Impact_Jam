@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/interact/staircase_door/door_staircase_0.png" type="Texture" id=1]
+[ext_resource path="res://assets/interact/staircase_door/door_staircase_1.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Area2D
+
+var player_body
+
+func _process(delta):
+	if $sprite.get_animation() != \"highlighted\":
+		return
+	if Input.is_action_just_pressed(\"ui_down\") && player_body.position.y < 2000:
+		player_body.position = Vector2(player_body.position.x, player_body.position.y + 800)
+	if Input.is_action_just_pressed(\"ui_up\") && player_body.position.y > 400:
+		player_body.position = Vector2(player_body.position.x, player_body.position.y - 800)
+
+func _on_Area2D_body_entered(body):
+	player_body = body
+	$sprite.play(\"highlighted\")
+
+func _on_Area2D_body_exited(body):
+	$sprite.play(\"default\")
+"
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "highlighted",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 96.0336, 52.834 )
+
+[node name="StaircaseDoor" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = SubResource( 3 )
+
+[node name="sprite" type="AnimatedSprite" parent="Area2D"]
+frames = SubResource( 1 )
+
+[node name="hitbox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 2 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]
