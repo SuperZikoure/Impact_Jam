@@ -80,10 +80,8 @@ position = Vector2( -608, 2368 )
 shape = SubResource( 3 )
 
 [node name="Doors" type="Node2D" parent="Level"]
-editor/display_folded = true
 
 [node name="Floor3" type="Node2D" parent="Level/Doors"]
-editor/display_folded = true
 
 [node name="SimpleDoor" parent="Level/Doors/Floor3" instance=ExtResource( 5 )]
 position = Vector2( -1488, 48 )
