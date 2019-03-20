@@ -27,14 +27,6 @@ margin_left = 550.0
 margin_top = 300.0
 margin_right = 1050.0
 margin_bottom = 370.0
-text = "Click here to resume"
-
-[node name="Button2" type="Button" parent="PausePanel"]
-margin_left = 610.0
-margin_top = 570.0
-margin_right = 956.0
-margin_bottom = 800.0
-text = "Click here to win"
+text = "Resume"
 
 [connection signal="pressed" from="PausePanel/Button" to="PausePanel" method="_on_Button_pressed"]
-[connection signal="pressed" from="PausePanel/Button2" to="PausePanel" method="_on_Button2_pressed"]

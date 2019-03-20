@@ -16,7 +16,7 @@ margin_left = 350.0
 margin_top = 200.0
 margin_right = 1250.0
 margin_bottom = 650.0
-text = "CONGRATZ YOU WON DEH GAME"
+text = "CONGRATULATION YOU SAVED JOHNY AND JOHN"
 align = 1
 valign = 1
 
@@ -25,6 +25,6 @@ margin_left = 470.0
 margin_top = 590.0
 margin_right = 1140.0
 margin_bottom = 720.0
-text = "Click here to go back to the menu"
+text = "Back to menu"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

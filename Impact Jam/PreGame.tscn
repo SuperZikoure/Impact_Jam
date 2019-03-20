@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Button.gd" type="Script" id=1]
+
+[node name="PreGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 470.0
+margin_top = 220.0
+margin_right = 1130.0
+margin_bottom = 440.0
+text = "                                                         THE BUILDING IS ON FIRE !!!!
+
+Johny and John are currently on the top floor of the building and they have to escape. They need  to help eachother to make it to the bottom.
+Hurry ! The flames are burning down the building !"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 560.0
+margin_top = 650.0
+margin_right = 1040.0
+margin_bottom = 740.0
+text = "Begin"
+script = ExtResource( 1 )
+
