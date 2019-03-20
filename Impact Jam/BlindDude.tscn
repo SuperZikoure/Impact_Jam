@@ -39,10 +39,7 @@
 [ext_resource path="res://assets/perso2_anim_left/perso2_anim_left6.png" type="Texture" id=37]
 [ext_resource path="res://assets/perso2_anim_left/perso2_anim_left7.png" type="Texture" id=38]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 40 )
-
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
@@ -75,6 +72,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 8 )
+
 [node name="BlindDude" type="Node2D"]
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
@@ -83,11 +83,12 @@ script = ExtResource( 1 )
 scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 
-[node name="Collision" type="CollisionShape2D" parent="Character"]
-shape = SubResource( 1 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Character"]
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "move_left"
+
+[node name="Collision" type="CollisionShape2D" parent="Character"]
+position = Vector2( 0, -8 )
+shape = SubResource( 2 )
 
 [connection signal="animation_finished" from="Character/AnimatedSprite" to="Character" method="_on_AnimatedSprite_animation_finished"]

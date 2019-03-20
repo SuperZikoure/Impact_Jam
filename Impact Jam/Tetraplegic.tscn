@@ -77,10 +77,7 @@
 [ext_resource path="res://assets/perso1_anim_left/perso1_anim_left09.png" type="Texture" id=75]
 [ext_resource path="res://assets/perso1_anim_left/perso1_anim_left10.png" type="Texture" id=76]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
-
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
@@ -113,6 +110,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 16 )
+
 [node name="Tetraplegic" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -120,11 +120,12 @@ script = ExtResource( 1 )
 scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 
-[node name="Collision" type="CollisionShape2D" parent="Character"]
-shape = SubResource( 1 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Character"]
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "anim_left"
+
+[node name="Collision" type="CollisionShape2D" parent="Character"]
+position = Vector2( 0, 16 )
+shape = SubResource( 2 )
 
 [connection signal="animation_finished" from="Character/AnimatedSprite" to="Character" method="_on_AnimatedSprite_animation_finished"]
