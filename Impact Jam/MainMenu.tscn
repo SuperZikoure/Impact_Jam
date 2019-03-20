@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://BtnQuit.gd" type="Script" id=1]
 [ext_resource path="res://BtnPlay.gd" type="Script" id=2]
@@ -12,11 +12,20 @@
 [ext_resource path="res://assets/menu/play_base.png" type="Texture" id=10]
 [ext_resource path="res://assets/menu/play_click.png" type="Texture" id=11]
 [ext_resource path="res://assets/menu/play_hover.png" type="Texture" id=12]
-[ext_resource path="res://TextureButton.gd" type="Script" id=13]
+[ext_resource path="res://Play.gd" type="Script" id=13]
+[ext_resource path="res://assets/menu/credits_base.png" type="Texture" id=14]
+[ext_resource path="res://assets/menu/credits_click.png" type="Texture" id=15]
+[ext_resource path="res://assets/menu/credits_hover.png" type="Texture" id=16]
+[ext_resource path="res://TextureButton.gd" type="Script" id=17]
+[ext_resource path="res://assets/menu/exit_menu.png" type="Texture" id=18]
+[ext_resource path="res://assets/menu/exit_click.png" type="Texture" id=19]
+[ext_resource path="res://assets/menu/exit_hover.png" type="Texture" id=20]
+[ext_resource path="res://Quit.gd" type="Script" id=21]
 
 [node name="MainMenu" type="Control"]
 
 [node name="BtnQuit" type="Button" parent="."]
+visible = false
 margin_left = 550.0
 margin_top = 560.0
 margin_right = 1050.0
@@ -48,6 +57,7 @@ scale = Vector2( 5, 5 )
 texture = ExtResource( 4 )
 
 [node name="ParallaxBackground3" type="ParallaxBackground" parent="Parallax"]
+editor/display_folded = true
 script = ExtResource( 5 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax/ParallaxBackground3"]
@@ -59,7 +69,6 @@ scale = Vector2( 5, 5 )
 texture = ExtResource( 6 )
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="Parallax"]
-editor/display_folded = true
 script = ExtResource( 7 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax/ParallaxBackground2"]
@@ -71,11 +80,11 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 770, 180 )
+position = Vector2( 810, 180 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="Play" type="TextureButton" parent="."]
 margin_left = 440.0
 margin_top = 400.0
 margin_right = 1840.0
@@ -85,4 +94,26 @@ texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 12 )
 script = ExtResource( 13 )
+
+[node name="Credits" type="TextureButton" parent="."]
+margin_left = 460.0
+margin_top = 514.0
+margin_right = 1860.0
+margin_bottom = 742.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 16 )
+script = ExtResource( 17 )
+
+[node name="Quit" type="TextureButton" parent="."]
+margin_left = 460.0
+margin_top = 630.0
+margin_right = 1860.0
+margin_bottom = 858.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 19 )
+texture_hover = ExtResource( 20 )
+script = ExtResource( 21 )
 

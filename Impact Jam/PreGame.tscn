@@ -10,11 +10,22 @@ anchor_bottom = 1.0
 margin_left = 470.0
 margin_top = 220.0
 margin_right = 1130.0
-margin_bottom = 440.0
-text = "                                                         THE BUILDING IS ON FIRE !!!!
+margin_bottom = 510.0
+text = "															ESCAPE FROM THE BUILDING !
+															
+						You are playing as both Jhonny and Jhon. Jhonny is Blind and Jhon is in a wheelchair.
+					      	Your goal is to get both Jhonny and Jhon out of the building as fast as you can
+																using both of their abilities.
+							You will have to collect items and keys to unlock doors in order to escape.
 
-Johny and John are currently on the top floor of the building and they have to escape. They need to help eachother in order to make it to the bottom.
-Hurry ! The flames are burning down the building !"
+
+CONTROLS :
+
+Directionnal keys : Move the character.
+Tab : Control the other character.
+Space : Interact with objects.																
+																
+																"
 
 [node name="Button" type="Button" parent="."]
 margin_left = 560.0
