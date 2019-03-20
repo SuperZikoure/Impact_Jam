@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 window/size/width=1600
 window/size/height=900
+window/size/resizable=false
 
 [input]
 
@@ -34,4 +35,5 @@ character_switch={
 
 [rendering]
 
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
