@@ -35,8 +35,6 @@ margin_top = 25.0
 margin_right = 24.0
 margin_bottom = 39.0
 text = "000"
-align = 1
-valign = 1
 script = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="Up/Center/TimerLabel"]
