@@ -8,5 +8,5 @@ func _on_Generator_generator():
 
 func _on_Exit_body_entered(body):
 	if open == 1:
-		get_tree().change_scene(res://WinScene.tscn)
+		get_tree().change_scene("res://WinScene.tscn")
 	pass
