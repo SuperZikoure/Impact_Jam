@@ -4,7 +4,6 @@
 [ext_resource path="res://BtnPlay.gd" type="Script" id=2]
 
 [node name="GameOver" type="Control"]
-editor/display_folded = true
 
 [node name="BtnBackToMenu" type="Button" parent="."]
 margin_left = 550.0
