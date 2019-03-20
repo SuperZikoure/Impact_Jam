@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED = 150
+const SPEED = 170
 var motion = Vector2()
 var look = -1
 var is_active = false
@@ -33,7 +33,7 @@ func set_idle_anim():
 func _on_AnimatedSprite_animation_finished():
 	if !is_active:
 		return
-		
+	
 	if motion.x == 0:
 		if randi() % 4 + 1 == 1:
 			if look == 1:
