@@ -7,6 +7,6 @@ func _on_Generator_generator():
 	pass
 
 func _on_Exit_body_entered(body):
-	if open == 1:
+	if open == 1 && body.get_name() == "WheelchairDude":
 		get_tree().change_scene("res://WinScene.tscn")
 	pass
