@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://BtnQuit.gd" type="Script" id=1]
 [ext_resource path="res://BtnPlay.gd" type="Script" id=2]
@@ -21,7 +21,6 @@
 [ext_resource path="res://assets/menu/exit_click.png" type="Texture" id=19]
 [ext_resource path="res://assets/menu/exit_hover.png" type="Texture" id=20]
 [ext_resource path="res://Quit.gd" type="Script" id=21]
-[ext_resource path="res://assets/sounds/Main_Menu.ogg" type="AudioStream" id=22]
 
 [node name="MainMenu" type="Control"]
 
@@ -117,8 +116,4 @@ texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 19 )
 texture_hover = ExtResource( 20 )
 script = ExtResource( 21 )
-
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 22 )
-autoplay = true
 

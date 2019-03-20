@@ -34,7 +34,8 @@ text = "																			ESCAPE FROM THE BUILDING !
 						
 						CONTROLS :
 
-Directionnal keys    :    Move the character.
+		LEFT & RIGHT       :    Move the character.
+	  	UP & DOWN			 :   Use stairs/escalators.
 				Tab					 :    Control the other character.
 			 Space				  :    Interact with objects.																
 																
